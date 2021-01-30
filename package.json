@@ -1,0 +1,27 @@
+{
+  "name": "dogstagram",
+  "version": "1.0.0",
+  "description": "# ApplicationName",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinhkim87/dogstagram.git"
+  },
+  "author": "James Kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinhkim87/dogstagram/issues"
+  },
+  "homepage": "https://github.com/jinhkim87/dogstagram#readme",
+  "dependencies": {
+    "connect-mongo": "^3.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.14"
+  }
+}
