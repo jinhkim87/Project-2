@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dogstagram</title>
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+  <!--Nav Bar Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fredoka+One&family=Righteous&display=swap" rel="stylesheet">
+  <!-- CSS Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- JS Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+
+<body>
+ 
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand">Dogstagram</a>
+      <div id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" a href="/addpost">New Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" a href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <% if (user) { %>
+              <a class="nav-link" href="/logout">Log Out</a>
+              <% } else { %>
+                <a class="nav-link" href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                <% } %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <header class="container">
+
+  </header>
+</header>
+<main class="container">
+  <div class="row">
+    <div id="users" class="col s12">
+      <% users.forEach(function(user) { %>
+        <div>
+          <div>
+            <div>
+              <span>
+                <span>
+                  <%= user.name %>
+                </span>
+              </span>
+            </div>
+            <ul>
+              <% user.posts.forEach(function(post, idx) { %>
+                <li class="collection-item">
+                  <%= post.name %> <br>
+                  <%= post.breed %> <br>
+                  <%= post.gender %> <br>
+                  <%= post.temp %> <br>
+                  <%= post.rescue %> <br>
+                  <%= post.tips %> <br><br>
+                    <% if (user._id.equals(user && user._id)) { %>
+                      <form action="/posts/<%= idx %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                      </form>
+                      <% } %>
+                </li>
+                <% }) %>
+            </ul>
+
+          </div>
+        </div>
+        <% }) %>
+        <% if (user._id.equals(user && user._id)) { %>
+          <div class="card-action">
+            <form action="/posts" method="POST">
+              <input type="text" name="name" style="width: 500px" value="Name: "><br>
+              <input type="text" name="breed" style="width: 500px" value="Breed: "><br>
+              <input type="text" name="gender" style="width: 500px" value="Gender: "><br>
+              <input type="text" name="temp" style="width: 500px" value="Temperament: "><br>
+              <input type="text" name="rescue" style="width: 500px" value="Rescue? (Y/N): "><br>
+              <input type="text" name="tips" style="width: 500px" value="Tips/Advice: "><br>
+              <input type="file" id="fileinput" name ="image" accept="image/*" />
+              <button type="submit" class="btn white-text">Add Post</button>
+            </form>
+          </div>
+          <% } %>
+    </div>
+  </div>
+</main>
+
+<div class="wallpaper">
+</div>
+
+</body>
+
+</html>

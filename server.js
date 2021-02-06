@@ -1,16 +1,49 @@
-// External Module
 
-const express = require ('express');
+const express = require('express');
+const morgan = require('morgan');
+const session = require('express-session')
+const passport = require('passport')
+const methodOverride = require('method-override')
+const port = 3000;
 
-// Internal Module
+// We'll need to load the env vars
+require('dotenv').config();
 
-// PORT
-const PORT = 4000
+// create the Express app
+const app = express();
 
-const app = express()
+// connect to the MongoDB with mongoose
+require('./config/database');
+require('./config/passport');
 
-//APP CONFIG
-app.set ('view engine', 'ejs');
+// require our routes
+const indexRoutes = require('./routes/index');
+const usersRoutes = require('./routes/users');
 
-//APP LISTENING
-app.listen(PORT, () => console.log(`listening at port ${PORT}\nhttp://localhost:${PORT}`));
+// view engine setup
+app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+app.use(methodOverride('_method'))
+app.use(morgan('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+//Add session middleware here
+ app.use(session({
+   secret: 'SEIRFLEXRocks!',
+   resave: false,
+   saveUninitialized: true
+ }));
+ app.use(passport.initialize());
+ app.use(passport.session());
+//  Add passport middleware here
+
+
+app.use('/', indexRoutes);
+app.use('/', usersRoutes);
+
+
+
+app.listen(port, () => {
+  console.log(`Express is listening on port:${port}`);
+});

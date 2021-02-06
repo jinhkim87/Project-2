@@ -1,0 +1,53 @@
+.card .card-content .card-title {
+  margin-bottom: 10px;
+}
+
+.navbar-fixed {
+  background-color: black;
+}
+
+header {
+  height: 100px;
+}
+.collection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-row form {
+  padding-top: 20px;
+}
+
+.user-name {
+  position: relative;
+  top: -5px;
+}
+
+.container {
+  position: absolute;
+  top: 25%;
+  width: 75%;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+}
+
+.wallpaper {
+  content: url("../images/background.jpg");
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.navbar-custom {
+  background-color: #8fbc8f;
+}
+
+.navbar-nav li a,
+.navbar-brand {
+  color: #f0f8ff;
+  font-family: "Comfortaa", cursive;
+  font-size: 30px;
+}
