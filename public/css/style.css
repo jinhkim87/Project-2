@@ -1,14 +1,3 @@
-.card .card-content .card-title {
-  margin-bottom: 10px;
-}
-
-.navbar-fixed {
-  background-color: black;
-}
-
-header {
-  height: 100px;
-}
 .collection-item {
   display: flex;
   justify-content: space-between;
@@ -17,17 +6,8 @@ header {
   padding: 10px;
 }
 
-#search-row form {
-  padding-top: 20px;
-}
-
-.user-name {
-  position: relative;
-  top: -5px;
-}
-
 .container {
-  position: absolute;
+  position: relative;
   top: 25%;
   width: 50%;
   text-align: center;
