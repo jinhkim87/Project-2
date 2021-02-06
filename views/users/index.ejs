@@ -51,14 +51,17 @@
           <div>
             <div>
               <span>
-                <span class = "userName">
-                  <%= user.name %>
-                </span>
+                
               </span>
             </div>
             <ul>
               <% user.posts.forEach(function(post, idx) { %>
                 <li class="collection-item">
+            
+                  <%= user.name %>
+      
+                <br>
+                <br>
                   <%= post.name %> <br>
                   <%= post.breed %> <br>
                   <%= post.gender %> <br>
