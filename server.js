@@ -10,7 +10,7 @@ const methodOverride = require('method-override')
 
 // We'll need to load the env vars
 require('dotenv').config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // create the Express app
 const app = express();
