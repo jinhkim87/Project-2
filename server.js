@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //Add session middleware here
  app.use(session({
-   secret: 'SEIRFLEXRocks!',
+   secret: process.env.SESSION_SECRET,
    resave: false,
    saveUninitialized: true
  }));

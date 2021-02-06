@@ -15,12 +15,7 @@ function index(req, res, next) {
  });
 }
 
-//  function addPost(req, res, next) {
-//    req.user.posts.push(req.body);
-//    req.user.save(function(err) {
-//      res.redirect('/users');
-//    });
-//  }
+
 function addPost(req, res, next) {
   User.findById(req.user.id, (err, user)=>{
     console.log(req.user.id)
