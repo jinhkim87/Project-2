@@ -5,6 +5,7 @@ const postSchema = new mongoose.Schema({
   name: String,
   breed: String,
   gender: String,
+  age: String,
   temp: String,
   rescue: String,
   tips: String,

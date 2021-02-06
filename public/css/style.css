@@ -13,6 +13,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid black;
+  padding: 10px;
 }
 
 #search-row form {
@@ -27,9 +29,10 @@ header {
 .container {
   position: absolute;
   top: 25%;
-  width: 75%;
+  width: 50%;
   text-align: center;
   font-family: "Comfortaa", cursive;
+  text-align: left;
 }
 
 .wallpaper {
@@ -50,4 +53,16 @@ header {
   color: #f0f8ff;
   font-family: "Comfortaa", cursive;
   font-size: 30px;
+}
+
+.dogInfo {
+  border: none;
+}
+
+.card-action {
+  margin: auto;
+  width: 75%;
+  border: 3px solid black;
+  padding: 10px;
+  background-color: white;
 }
