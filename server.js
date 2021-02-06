@@ -4,10 +4,11 @@ const morgan = require('morgan');
 const session = require('express-session')
 const passport = require('passport')
 const methodOverride = require('method-override')
-const port = 3000;
+
 
 // We'll need to load the env vars
 require('dotenv').config();
+const PORT = process.env.PORT;
 
 // create the Express app
 const app = express();
@@ -44,6 +45,6 @@ app.use('/', usersRoutes);
 
 
 
-app.listen(port, () => {
-  console.log(`Express is listening on port:${port}`);
+app.listen(PORT, () => {
+  console.log(`Express is listening on port:${PORT}`);
 });
