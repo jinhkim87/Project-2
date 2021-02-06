@@ -44,8 +44,12 @@ Many to Many - Post (Picture, String of Text)
 
 ## Challenges:
 
-## Additional information:
+## Next Steps:
+
+-Log out
+-Able to post pictures
+-Comment/Questions on the Post.
 
 ## App Demo
 
-Link to GitHub project (i.e. - username.github.io)
+https://agile-mesa-51957.herokuapp.com/
