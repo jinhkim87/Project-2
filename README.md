@@ -26,6 +26,10 @@ Many to Many - Post (Picture, String of Text)
 
 ## Wireframes:
 
+![Wireframe](./Wireframe.png)
+
+![ERD](./ERD.png)
+
 ## Technologies Used:
 
 - HTML
